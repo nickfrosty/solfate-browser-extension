@@ -29,7 +29,7 @@ To manually install the extension into your browser, you will need to load the "
 
 ## Build From Source
 
-> **NOTE:** This extension requires NodeJS to be installed. And it is recommended to use YARN as the package manager to install dependancies. NPM should work, but incorrect package versions may be inadvertently installed.
+> **NOTE:** This extension requires NodeJS to be installed. And it is recommended to use YARN as the package manager to install dependencies. NPM should work, but incorrect package versions may be inadvertently installed.
 
 1. Download the extension repo from here. With `git clone`:
 
@@ -45,7 +45,7 @@ yarn install
 
 3. Build from source
 
-Running either build cmmand listed below will build the "unpacked" version of
+Running either build command listed below will build the "unpacked" version of
 the browser extension into the `build` directory.
 
 To build the `production` ready extension:
