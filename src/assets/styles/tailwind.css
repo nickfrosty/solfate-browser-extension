@@ -1,0 +1,455 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/*
+	LIGHT: #fffaf4
+	DARK: #f9eddd
+	YELLOW-500: #f59e0b
+*/
+
+.scroller {
+  @apply scrollbar-thin scrollbar-track-white scrollbar-thumb-gray-500;
+}
+
+/**
+	Define the layout components
+*/
+body {
+  @apply scroller;
+  @apply text-black bg-gray-50;
+  @apply tracking-wide;
+  @apply items-center;
+  @apply text-base;
+  /* @apply pt-26; */
+}
+
+.flexer {
+  @apply flex items-center space-x-4;
+  /* @apply overflow-ellipsis overflow-clip overflow-hidden; */
+  /* @apply truncate; */
+}
+.icon {
+  @apply inline-block w-5 h-5 md:w-6 md:h-6;
+}
+
+.container {
+  @apply md:max-w-5xl;
+  @apply gap-8 p-5 mx-auto space-y-4 md:space-y-8 md:py-10 md:px-4;
+  @apply justify-between;
+}
+.container-inner {
+  @apply max-w-xl items-center mx-auto;
+}
+
+.focus-area {
+  @apply max-w-5xl w-full items-center text-center md:text-left;
+  @apply grid gap-8 md:flex justify-between;
+  @apply mx-auto space-y-10 md:space-y-0 md:space-x-8 md:flex;
+  @apply px-4 py-8;
+}
+.focus-image {
+  @apply block px-10 md:max-h-76 md:px-0;
+}
+
+/* Define custom tailwind components */
+.dropdown-menu {
+  @apply transition-all duration-300 transform origin-top-right scale-95 -translate-y-2;
+  @apply text-gray-700;
+  /* @apply text-gray-100; */
+}
+.dropdown-inner {
+  @apply whitespace-nowrap min-w-56;
+  @apply absolute right-0 mt-2 rounded-md origin-top-right outline-none;
+  @apply bg-white border border-gray-300;
+  /* @apply bg-gray-900 border border-gray-800; */
+}
+.summary a,
+.link {
+  /* @apply focus:outline-none; */
+  @apply cursor-pointer;
+  /* @apply focus:border-yellow-500;
+	@apply hover:text-yellow-500; */
+  @apply text-blue-500;
+  @apply hover:text-yellow-500;
+  @apply hover:underline;
+}
+
+.social-link {
+  @apply flex items-center w-full rounded-lg;
+  @apply px-6 py-4 space-x-4 text-base md:text-lg font-medium;
+  @apply border border-gray-300;
+  @apply hover:border-gray-400 hover:shadow-md;
+  @apply text-gray-600 hover:text-black;
+}
+.title {
+  @apply text-xl tracking-wide md:text-3xl heading;
+}
+
+.bio {
+  @apply text-lg tracking-wide;
+}
+
+.avatar {
+  @apply block overflow-hidden flex-grow-0 flex-shrink-0 rounded-full border-0;
+  @apply w-16 h-16 md:w-32 md:h-32;
+}
+.avatar img {
+  @apply w-full;
+}
+
+.card {
+  @apply rounded-md border border-gray-300;
+  @apply w-full overflow-hidden;
+  /* @apply p-5 w-full rounded-lg border;
+	@apply border-gray-700 border-opacity-30 hover:border-indigo-700; */
+}
+
+.box {
+  @apply p-8 bg-white rounded-2xl sm:p-6 xl:p-8;
+  /* @apply text-gray-800 bg-white shadow; */
+  @apply border-2 border-black;
+  /* @apply text-gray-100 bg-gray-900; */
+  /* sm:p-6 xl:p-8 2xl:col-span-2 */
+  /* @apply p-4 space-y-4 text-lg text-center bg-gray-900 rounded-lg shadow  sm:p-6 xl:p-8 2xl:col-span-2 */
+}
+.box .inner-box {
+  @apply space-y-4 text-lg text-center;
+  /* @apply sm:p-6 xl:p-8 2xl:col-span-2; */
+}
+.heading {
+  @apply text-3xl font-bold leading-none sm:text-3xl;
+}
+.label {
+  @apply block mb-2 font-semibold tracking-wide;
+  /* @apply text-gray-600; */
+  /* @apply text-gray-200; */
+}
+.box .label {
+  /* @apply text-gray-100; */
+}
+
+/*
+	Form components
+*/
+/* .code_editor {
+	@apply scroller;
+}
+.code_area code {
+	@apply scroller;
+} */
+input[type="text"],
+input[type="url"],
+input[type="password"],
+input[type="date"],
+textarea,
+select,
+.input {
+  @apply scroller;
+  @apply block px-4 py-3 w-full leading-5 appearance-none;
+  @apply transition duration-150 ease-in-out;
+  @apply rounded-md border shadow-sm;
+  @apply text-gray-700 bg-white border-gray-300;
+  @apply focus:outline-none focus:border-yellow-500;
+  /* @apply text-gray-100 bg-gray-700 border-gray-600;
+	@apply focus:outline-none focus:border-indigo-400; */
+}
+.btn.disabled,
+.input.disabled {
+  @apply bg-gray-200 cursor-default text-black;
+  @apply hover:bg-gray-200 hover:text-black;
+}
+
+/* .button {
+	@apply text-lg font-semibold rounded-lg shadow-xl;
+	@apply leading-normal transition appearance-none focus:outline-none;
+} */
+
+input[type="button"],
+input[type="submit"],
+button,
+.btn {
+  @apply items-center leading-normal transition appearance-none cursor-pointer;
+  /* @apply focus:outline-none; */
+  /* focus:border-gray-700; */
+  @apply tracking-normal rounded-lg;
+  @apply px-5 py-2;
+  @apply flex space-x-2;
+  @apply font-semibold;
+}
+.btn-sm {
+  @apply px-3 py-2;
+}
+.btn-md {
+  @apply px-5 py-2;
+}
+.btn-lg {
+  @apply px-6 py-3;
+}
+.btn-toggle {
+  @apply mt-2 md:mt-0;
+}
+
+.btn-default {
+  @apply text-black hover:bg-yellow-500 focus:bg-yellow-500;
+  @apply border-2 border-black bg-color-light;
+}
+
+.btn-default-dark {
+  @apply text-black hover:bg-yellow-500 focus:bg-yellow-500;
+  @apply border-2 border-black;
+  @apply bg-yellow-400;
+}
+
+.btn.loading {
+  @apply bg-gray-200 cursor-default hover:bg-gray-200;
+}
+.btn-gray {
+  @apply text-white bg-gray-700 hover:bg-indigo-600;
+}
+.btn-gray-outline {
+  @apply border border-gray-700 hover:bg-indigo-600 hover:text-white hover:border-indigo-900 focus:border-gray-400;
+}
+.btn-red {
+  @apply text-white bg-red-600 hover:bg-red-900;
+}
+.btn-red-outline {
+  @apply border border-red-600 hover:bg-red-600 hover:text-white;
+}
+.btn-white {
+  @apply text-gray-900 bg-white hover:bg-blue-300;
+}
+.btn-white-outline {
+  /* @apply text-gray-900 bg-white hover:bg-blue-300; */
+  @apply border border-transparent hover:bg-white hover:border-blue-500 hover:text-gray-900;
+}
+.btn-twitter {
+  @apply text-white bg-twitter hover:bg-twitter;
+}
+.btn-blue {
+  @apply text-white bg-blue-500 hover:bg-blue-600;
+}
+.btn-blue-outline {
+  /* @apply text-white bg-blue-500 hover:bg-blue-600; */
+  @apply border border-blue-500 hover:bg-blue-600 hover:text-white focus:border-gray-400;
+  @apply hover:text-white;
+}
+.btn-blue-light {
+  @apply text-white bg-blue-300 hover:bg-blue-500;
+}
+.btn-blue-default {
+  @apply text-white bg-blue-500 hover:bg-blue-600;
+  @apply font-semibold rounded-full;
+}
+.btn-blue-indigo {
+  @apply text-white bg-blue-500 hover:bg-indigo-600;
+}
+.btn-blue-yellow {
+  @apply text-white bg-blue-500 hover:bg-yellow-500;
+}
+.btn-indigo {
+  @apply text-white bg-indigo-600 hover:bg-indigo-700;
+  /* hover: bg-gray-700; */
+}
+.btn-indigo-outline-dark {
+  @apply bg-gray-900 border border-indigo-700 hover:bg-indigo-600 hover:text-white focus:border-gray-400;
+}
+.btn-indigo-outline {
+  @apply border border-indigo-700 hover:bg-indigo-600 hover:text-white focus:border-gray-400;
+  @apply hover:text-white;
+  /* @apply text-white bg-indigo-600 hover:bg-indigo-700; */
+  /* hover: bg-gray-700; */
+}
+.btn-yellow,
+.btn-orange {
+  @apply text-white bg-yellow-500 hover:bg-blue-500;
+}
+
+/**
+	Modal / dialog component styles
+*/
+.modal {
+  @apply overflow-y-auto fixed inset-0 z-50;
+}
+.modal .overlay {
+  @apply flex justify-center items-end px-4 pt-4 pb-20 min-h-screen text-center sm:block sm:p-0;
+  @apply cursor-default;
+}
+.modal .shade {
+  @apply fixed inset-0 bg-black opacity-50 transition-opacity;
+}
+.modal.loading {
+  @apply fixed inset-0 bg-black opacity-70 transition-opacity;
+}
+.dialog {
+  @apply inline-block my-auto text-left align-bottom;
+  @apply transition-all transform;
+  @apply w-full rounded-lg sm:my-8 sm:align-middle sm:max-w-lg;
+  /* @apply overflow-hidden; */
+
+  @apply bg-color-dark;
+  @apply border border-black md:shadow-black;
+  /* @apply bg-white shadow-xl; */
+}
+
+/*
+	Transitions and animations
+*/
+.twist {
+  transform: scale(1) perspective(1040px) rotateY(-11deg) rotateX(2deg)
+    rotate(2deg);
+}
+.bounce-enter-active {
+  animation: bounce-in 0.5s;
+}
+.bounce-leave-active {
+  animation: bounce-in 0.5s reverse;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.bounce-small-enter-active {
+  animation: bounce-in-small 0.5s;
+}
+.bounce-small-leave-active {
+  animation: bounce-in-small 0.5s reverse;
+}
+@keyframes bounce-in-small {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.fade-enter-active {
+  animation: fade-in 0.5s;
+}
+.fade-leave-active {
+  animation: fade-in 0.5s reverse;
+}
+@keyframes fade-in {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*
+	Footer specific stylying
+*/
+
+.simple-footer {
+  @apply mt-2 space-x-2 w-full text-base text-center;
+}
+
+footer .title {
+  @apply block mb-2 text-sm font-semibold text-gray-500 uppercase;
+}
+footer .link {
+  @apply pb-2 text-sm font-semibold text-gray-600 hover:text-gray-900 hover:underline;
+}
+
+footer .three-column {
+  @apply w-1/2 px-4 mt-5 md:w-1/3 lg:w-4/12;
+}
+footer .two-column {
+  @apply w-1/2 px-0 md:px-4 mt-5;
+}
+
+/*
+	Main Nav classes - #AppNav
+*/
+
+#AppNav {
+  @apply w-full;
+
+  @apply bg-white border-b border-gray-200;
+  /* @apply fixed top-0 z-20 bg-color-dark; */
+  /* @apply border-b border-gray-400 shadow-md md:shadow-none md:border-0; */
+}
+
+#AppNav .NavLink.default {
+  @apply flex items-center p-4 md:px-6;
+  @apply transition-colors duration-150 ease-in-out;
+  @apply space-x-2 text-lg font-semibold;
+  @apply border-b-2 border-transparent;
+  @apply tracking-wide;
+  /* @apply text-white; */
+  /* focus:outline-none focus:shadow-outline */
+}
+#AppNav .NavLink.active {
+  /* @apply text-yellow-500; */
+  /* @apply border-yellow-500; */
+  @apply text-black underline;
+  /* @apply bg-purple-200; */
+  /* @apply text-white bg-indigo-700; */
+}
+#AppNav .NavLink.inactive {
+  @apply hover:underline;
+  /* @apply text-gray-400; */
+  /* @apply hover:border-yellow-500; */
+  /* @apply hover:bg-purple-300; */
+  /* @apply hover:bg-indigo-700; */
+}
+
+/*
+	Auth page formats
+*/
+
+.auth .box-inner {
+  @apply relative;
+  @apply py-4 px-9 sm:px-16 sm:py-12;
+}
+.auth .heading {
+  @apply text-5xl font-bold leading-none;
+  /* light:text-gray-900 */
+  @apply mb-12 text-center;
+}
+.auth .link-area {
+  @apply w-full mt-8 text-center space-x-2;
+}
+
+/*
+
+*/
+.sidebar-nav {
+  @apply space-y-1;
+}
+.sidebar-nav .icon {
+  @apply inline-block w-6 h-6;
+}
+.sidebar-nav .link {
+  @apply flex justify-start p-3 space-x-2 bg-transparent border border-transparent;
+  @apply hover:no-underline no-underline;
+  @apply text-gray-500;
+}
+.sidebar-nav .link.active {
+  @apply text-black;
+  @apply border-gray-200 bg-white;
+}
+.sidebar-nav .link.inactive {
+  @apply hover:text-black;
+  @apply hover:border-gray-200 hover:bg-white;
+}
+
+.toggle {
+  @apply absolute left-0 mb-2 w-6 h-6 cursor-pointer;
+  @apply transition duration-100 ease-linear transform;
+  @apply bg-white rounded-full border-2;
+}
