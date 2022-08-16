@@ -7,6 +7,10 @@ Browse .sol domains and IPFS websites like web2 and explore the decentralized So
 - navigate to any .sol domain like it is web3
 - IPFS explorer to browse IPFS content
 
+> Watch a video of the Solfate extension in action: [https://youtu.be/J11ybP3nZE8](https://youtu.be/J11ybP3nZE8)
+
+[![Watch a video of the Solfate extension in action](https://img.youtube.com/vi/J11ybP3nZE8/0.jpg)](https://www.youtube.com/watch?v=J11ybP3nZE8)
+
 ## Example content
 
 After installing the Solfate browser extension, try to browse to the following urls:
@@ -16,6 +20,8 @@ After installing the Solfate browser extension, try to browse to the following u
 - [https://bonfida.sol](https://bonfida.sol)
 
 ## Manually Install Extension (Load Unpacked)
+
+> Video tutorial on how to install the Solfate extension: [https://youtu.be/1Y9wEsJ8_j0](https://youtu.be/1Y9wEsJ8_j0)
 
 To manually install the extension into your browser, you will need to load the "unpacked" extension into your browser:
 
